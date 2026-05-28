@@ -164,6 +164,94 @@
   .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
   .legend-text{font-size:13px;color:var(--text)}
   .legend-pct{font-size:12px;color:var(--text-muted);margin-left:auto}
+
+  /* PREVISIBILIDADE */
+  .prev-hero{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+  .prev-hero-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden}
+  .prev-hero-card.urgent{border-color:#C62828;background:#FFFAFA}
+  .prev-hero-card.warn{border-color:#B5451B;background:#FFFCF8}
+  .prev-hero-card.good{border-color:#2D6A4F;background:#FAFFFC}
+  .phc-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:6px}
+  .phc-value{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;line-height:1;color:var(--text)}
+  .phc-value.urgent{color:#C62828}
+  .phc-value.warn{color:#B5451B}
+  .phc-value.good{color:#2D6A4F}
+  .phc-unit{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;color:var(--text-muted);margin-left:4px}
+  .phc-sub{font-size:13px;color:var(--text-muted);margin-top:8px;line-height:1.4}
+  .phc-icon{position:absolute;right:18px;top:18px;font-size:28px;opacity:0.12}
+  .prev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+  .prev-full{grid-column:1/-1}
+  .section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--wood-dark);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .section-label:after{content:'';flex:1;height:1px;background:var(--border)}
+
+  /* Production timeline */
+  .prod-timeline{display:flex;gap:0;overflow-x:auto;padding-bottom:4px}
+  .prod-day{min-width:72px;border-right:1px solid var(--border);padding:10px 8px;text-align:center;flex-shrink:0}
+  .prod-day:last-child{border-right:none}
+  .pd-date{font-size:11px;color:var(--text-muted);margin-bottom:6px}
+  .pd-bar-wrap{height:80px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:6px}
+  .pd-bar{width:36px;border-radius:4px 4px 0 0;min-height:4px;transition:height 0.3s}
+  .pd-bar.overload{background:#C62828}
+  .pd-bar.high{background:#B5451B}
+  .pd-bar.normal{background:var(--wood-mid)}
+  .pd-bar.low{background:#C8D8C0}
+  .pd-val{font-size:13px;font-weight:600;color:var(--text)}
+  .pd-capacity{font-size:10px;color:var(--text-muted)}
+  .capacity-line{position:relative;margin-top:4px}
+
+  /* Ruptura table */
+  .ruptura-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .ruptura-row:last-child{border-bottom:none}
+  .ruptura-prod{flex:1;font-size:14px;font-weight:500}
+  .ruptura-days{text-align:center;min-width:60px}
+  .ruptura-days strong{font-size:18px;font-family:'Playfair Display',serif}
+  .ruptura-days span{display:block;font-size:11px;color:var(--text-muted)}
+  .ruptura-action{font-size:12px;color:var(--info);cursor:pointer}
+  .severity-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+  /* Demand forecast */
+  .forecast-bars{display:flex;align-items:flex-end;gap:6px;height:100px;margin-bottom:6px}
+  .fc-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .fc-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px}
+  .fc-bar.hist{background:var(--wood-mid)}
+  .fc-bar.proj{background:var(--wood-mid);opacity:0.4;border:1px dashed var(--wood-dark)}
+  .fc-label{font-size:10px;color:var(--text-muted);text-align:center}
+  .fc-val{font-size:10px;font-weight:600;color:var(--text)}
+  .fc-legend{display:flex;gap:16px;margin-top:8px}
+  .fc-leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)}
+  .fc-leg-dot{width:10px;height:10px;border-radius:2px}
+
+  /* Giro */
+  .giro-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .giro-row:last-child{border-bottom:none}
+  .giro-name{flex:1;font-size:13px;font-weight:500}
+  .giro-track{flex:2;height:6px;background:#E8E0D0;border-radius:3px;overflow:hidden}
+  .giro-fill{height:100%;border-radius:3px;background:var(--wood-mid)}
+  .giro-fill.fast{background:#2D6A4F}
+  .giro-fill.slow{background:#C62828}
+  .giro-val{min-width:52px;text-align:right;font-size:12px;font-weight:600;color:var(--text)}
+  .giro-days{min-width:40px;text-align:right;font-size:11px;color:var(--text-muted)}
+
+  /* Insight cards */
+  .insight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+  .insight-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+  .insight-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  .insight-icon.red{background:var(--danger-bg);color:var(--danger)}
+  .insight-icon.amber{background:var(--warning-bg);color:var(--warning)}
+  .insight-icon.green{background:var(--success-bg);color:var(--success)}
+  .insight-text p{font-size:13px;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:2px}
+  .insight-text span{font-size:12px;color:var(--text-muted);line-height:1.4}
+
+  /* Receita projetada */
+  .receita-proj{display:flex;gap:0}
+  .rp-col{flex:1;text-align:center;padding:10px 6px;border-right:1px solid var(--border)}
+  .rp-col:last-child{border-right:none}
+  .rp-mes{font-size:11px;color:var(--text-muted);margin-bottom:6px}
+  .rp-bar-wrap{height:60px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:6px}
+  .rp-bar{width:28px;border-radius:3px 3px 0 0}
+  .rp-bar.real{background:var(--wood-dark)}
+  .rp-bar.proj{background:var(--wood-mid);opacity:0.5}
+  .rp-val{font-size:12px;font-weight:600;color:var(--text)}
 </style>
 </head>
 <body>
@@ -184,6 +272,9 @@
     </div>
     <div class="nav-item" onclick="showPage('estoque')">
       <i class="ti ti-package"></i> Estoque
+    </div>
+    <div class="nav-item" onclick="showPage('previsibilidade')">
+      <i class="ti ti-chart-line"></i> Previsibilidade
     </div>
     <div class="nav-section">Cadastros</div>
     <div class="nav-item" onclick="showPage('produtos')">
@@ -347,6 +438,69 @@
           <tbody id="tb-clientes"></tbody>
         </table>
       </div>
+    </div>
+
+    <!-- PREVISIBILIDADE -->
+    <div id="page-previsibilidade" class="panel-view">
+
+      <!-- Insight strip -->
+      <div class="insight-strip" id="prev-insights"></div>
+
+      <!-- Hero KPIs -->
+      <div class="section-label"><i class="ti ti-tool"></i> Capacidade de produção hoje</div>
+      <div class="prev-hero" id="prev-hero"></div>
+
+      <!-- Production timeline + ruptura -->
+      <div class="prev-grid">
+        <div class="card" style="overflow:visible">
+          <div class="card-header"><h3>Produção necessária — próximos 14 dias</h3></div>
+          <div style="padding:16px 20px 20px">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px">
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)"><div style="width:12px;height:12px;background:#C62828;border-radius:2px"></div>Sobrecarga</div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)"><div style="width:12px;height:12px;background:#B5451B;border-radius:2px"></div>Alta</div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)"><div style="width:12px;height:12px;background:var(--wood-mid);border-radius:2px"></div>Normal</div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)"><div style="width:12px;height:12px;background:#C8D8C0;border-radius:2px"></div>Baixa</div>
+              <span style="margin-left:auto;font-size:12px;color:var(--text-muted)">Capacidade: <strong style="color:var(--text)">20 cx/dia</strong></span>
+            </div>
+            <div class="prod-timeline" id="prod-timeline"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Previsão de ruptura de estoque</h3></div>
+          <div style="padding:16px 24px 20px" id="ruptura-list"></div>
+        </div>
+      </div>
+
+      <!-- Demand forecast + giro -->
+      <div class="prev-grid">
+        <div class="chart-card">
+          <div class="chart-title">Previsão de demanda — próximos 3 meses</div>
+          <div class="forecast-bars" id="fc-bars"></div>
+          <div style="display:flex;justify-content:space-between" id="fc-labels"></div>
+          <div class="fc-legend">
+            <div class="fc-leg-item"><div class="fc-leg-dot" style="background:var(--wood-mid)"></div>Histórico real</div>
+            <div class="fc-leg-item"><div class="fc-leg-dot" style="background:var(--wood-mid);opacity:0.4;border:1px dashed var(--wood-dark)"></div>Projeção</div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Giro de estoque por produto</div>
+          <div id="giro-list"></div>
+        </div>
+      </div>
+
+      <!-- Receita projetada -->
+      <div class="card" style="margin-bottom:4px">
+        <div class="card-header"><h3>Projeção de receita — 6 meses</h3><span style="font-size:13px;color:var(--text-muted)">Baseado na tendência atual de pedidos</span></div>
+        <div style="padding:16px 24px 24px">
+          <div class="receita-proj" id="receita-proj"></div>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:24px">
+            <div><div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">Total realizado (3m)</div><div style="font-size:22px;font-family:'Playfair Display',serif;font-weight:700" id="rp-real">—</div></div>
+            <div><div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">Projeção próximos 3m</div><div style="font-size:22px;font-family:'Playfair Display',serif;font-weight:700;color:var(--wood-dark)" id="rp-proj">—</div></div>
+            <div><div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">Crescimento esperado</div><div style="font-size:22px;font-family:'Playfair Display',serif;font-weight:700;color:#2D6A4F" id="rp-growth">—</div></div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -521,10 +675,11 @@ function showPage(p){
   document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
   event&&event.currentTarget&&event.currentTarget.classList.add('active');
-  const titles={dashboard:'Dashboard <span>Visão geral do negócio</span>',pedidos:'Pedidos <span>Gestão de pedidos</span>',estoque:'Estoque <span>Controle de estoque</span>',produtos:'Produtos <span>Catálogo de produtos</span>',clientes:'Clientes <span>Base de clientes</span>'};
+  const titles={dashboard:'Dashboard <span>Visão geral do negócio</span>',pedidos:'Pedidos <span>Gestão de pedidos</span>',estoque:'Estoque <span>Controle de estoque</span>',produtos:'Produtos <span>Catálogo de produtos</span>',clientes:'Clientes <span>Base de clientes</span>',previsibilidade:'Previsibilidade <span>Demanda, produção e estoque</span>'};
   document.getElementById('topbar-title').innerHTML=titles[p]||p;
   if(p==='pedidos')renderPedidos();
   if(p==='estoque')renderEstoque();
+  if(p==='previsibilidade')renderPrevisibilidade();
   if(p==='produtos')renderProdutos();
   if(p==='clientes')renderClientes();
 }
@@ -750,6 +905,171 @@ function buildDonut(){
 document.querySelectorAll('.modal-overlay').forEach(o=>{
   o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')});
 });
+
+
+function renderPrevisibilidade(){
+  const CAP_DIA = 20;
+  const hoje = new Date();
+  
+  // --- Production timeline: next 14 days ---
+  const tl = document.getElementById('prod-timeline');
+  const diasSemana = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  const prodDias = [];
+  for(let i=0;i<14;i++){
+    const d = new Date(hoje);
+    d.setDate(d.getDate()+i);
+    const dow = d.getDay();
+    const util = dow!==0&&dow!==6;
+    // simulate demand: base + noise
+    const base = util ? Math.round(8 + Math.random()*18) : 0;
+    prodDias.push({d, label: diasSemana[dow]+' '+(d.getDate())+'/'+(d.getMonth()+1), val:base, util});
+  }
+  const maxVal = Math.max(...prodDias.map(x=>x.val), CAP_DIA);
+  tl.innerHTML = prodDias.map(x=>{
+    const h = x.val===0 ? 0 : Math.max(6, Math.round((x.val/maxVal)*80));
+    const cls = x.val===0 ? 'low' : x.val > CAP_DIA ? 'overload' : x.val > CAP_DIA*0.8 ? 'high' : x.val > CAP_DIA*0.4 ? 'normal' : 'low';
+    const capH = Math.round((CAP_DIA/maxVal)*80);
+    return `<div class="prod-day">
+      <div class="pd-date">${x.label}</div>
+      <div class="pd-bar-wrap" style="position:relative">
+        <div style="position:absolute;bottom:${capH}px;left:0;right:0;border-top:1.5px dashed #C8A96E;opacity:0.6"></div>
+        <div class="pd-bar ${cls}" style="height:${h}px"></div>
+      </div>
+      <div class="pd-val">${x.val}</div>
+      <div class="pd-capacity">${x.util?'cap '+CAP_DIA:'—'}</div>
+    </div>`;
+  }).join('');
+
+  // Total caixas pendentes / dias úteis restantes no mês
+  const totalPend = pedidos.filter(p=>p.status==='pendente'||p.status==='producao').reduce((a,x)=>a+x.qtd,0);
+  const diasUteisMes = 22 - hoje.getDate()/1.4 | 0 || 1;
+  const cxDia = Math.ceil(totalPend / diasUteisMes);
+  const ocupacao = Math.round((cxDia/CAP_DIA)*100);
+  const heroStatus = cxDia > CAP_DIA ? 'urgent' : cxDia > CAP_DIA*0.7 ? 'warn' : 'good';
+  const heroLabel = cxDia > CAP_DIA ? 'urgent' : cxDia > CAP_DIA*0.7 ? 'warn' : 'good';
+
+  document.getElementById('prev-hero').innerHTML = `
+    <div class="prev-hero-card ${heroStatus}">
+      <div class="phc-icon"><i class="ti ti-hammer"></i></div>
+      <div class="phc-label">Caixas/dia necessárias</div>
+      <div class="phc-value ${heroLabel}">${cxDia}<span class="phc-unit">cx/dia</span></div>
+      <div class="phc-sub">Para zerar os ${totalPend} itens pendentes em ${diasUteisMes} dias úteis restantes</div>
+    </div>
+    <div class="prev-hero-card ${ocupacao>100?'urgent':ocupacao>70?'warn':'good'}">
+      <div class="phc-icon"><i class="ti ti-percentage"></i></div>
+      <div class="phc-label">Ocupação da capacidade</div>
+      <div class="phc-value ${ocupacao>100?'urgent':ocupacao>70?'warn':'good'}">${Math.min(ocupacao,999)}<span class="phc-unit">%</span></div>
+      <div class="phc-sub">Capacidade instalada: ${CAP_DIA} cx/dia · ${ocupacao>100?'Sobrecarga! Considere hora extra':'Dentro do limite'}</div>
+    </div>
+    <div class="prev-hero-card">
+      <div class="phc-icon"><i class="ti ti-calendar"></i></div>
+      <div class="phc-label">Dias úteis restantes</div>
+      <div class="phc-value">${diasUteisMes}<span class="phc-unit">dias</span></div>
+      <div class="phc-sub">${totalPend} caixas no backlog · Previsão de conclusão: ${cxDia<=CAP_DIA?'dentro do prazo':'prazo em risco'}</div>
+    </div>`;
+
+  // --- Ruptura de estoque ---
+  const rupList = document.getElementById('ruptura-list');
+  const velocidades = {1:3,2:4,3:2.5,4:5,5:4,6:3,7:2,8:1.5,9:2,10:6}; // cx/dia vendidas
+  const rupturas = produtos.map(p=>{
+    const vel = velocidades[p.id]||2;
+    const diasAteRuptura = vel>0 ? Math.round(p.estoque/vel) : 999;
+    return {...p, vel, diasAteRuptura};
+  }).sort((a,b)=>a.diasAteRuptura-b.diasAteRuptura).slice(0,7);
+
+  rupList.innerHTML = rupturas.map(r=>{
+    const cor = r.diasAteRuptura<=3?'#C62828':r.diasAteRuptura<=7?'#B5451B':r.diasAteRuptura<=14?'#C8A96E':'#2D6A4F';
+    return `<div class="ruptura-row">
+      <div class="severity-dot" style="background:${cor}"></div>
+      <div class="ruptura-prod">${r.nome}<br><span style="font-size:11px;color:var(--text-muted)">${r.estoque} em estoque · ${r.vel} cx/dia</span></div>
+      <div class="ruptura-days"><strong style="color:${cor}">${r.diasAteRuptura>=99?'OK':r.diasAteRuptura}</strong><span>${r.diasAteRuptura>=99?'sem risco':'dias'}</span></div>
+    </div>`;
+  }).join('');
+
+  // --- Demand forecast ---
+  const mesesHist = ['Nov','Dez','Jan','Fev','Mar','Abr','Mai'];
+  const valsHist = [22,38,31,35,42,39,47];
+  const trend = (valsHist[valsHist.length-1] - valsHist[0]) / valsHist.length;
+  const mesesProj = ['Jun','Jul','Ago'];
+  const valsProj = mesesProj.map((_,i)=>Math.round(valsHist[valsHist.length-1] + trend*(i+1)));
+  const allVals = [...valsHist,...valsProj];
+  const maxFc = Math.max(...allVals);
+
+  const fcBars = document.getElementById('fc-bars');
+  const fcLabels = document.getElementById('fc-labels');
+  const allMeses = [...mesesHist,...mesesProj];
+  fcBars.innerHTML = allMeses.map((m,i)=>{
+    const v = i<mesesHist.length ? valsHist[i] : valsProj[i-mesesHist.length];
+    const h = Math.max(4, Math.round((v/maxFc)*96));
+    const cls = i<mesesHist.length ? 'hist' : 'proj';
+    return `<div class="fc-col"><div class="fc-val">${v}</div><div class="fc-bar ${cls}" style="height:${h}px"></div></div>`;
+  }).join('');
+  fcLabels.innerHTML = allMeses.map(m=>`<div style="flex:1;text-align:center;font-size:10px;color:var(--text-muted)">${m}</div>`).join('');
+
+  // --- Giro de estoque ---
+  const giroList = document.getElementById('giro-list');
+  const giroData = produtos.map(p=>{
+    const vel = velocidades[p.id]||2;
+    const diasGiro = vel>0 ? Math.round(p.estoque/vel) : 999;
+    return {...p, vel, diasGiro};
+  }).sort((a,b)=>a.diasGiro-b.diasGiro).slice(0,8);
+  const maxGiro = Math.max(...giroData.map(x=>Math.min(x.diasGiro,60)));
+  giroList.innerHTML = giroData.map(g=>{
+    const pct = Math.round((Math.min(g.diasGiro,60)/maxGiro)*100);
+    const cls = g.diasGiro<=7?'fast':g.diasGiro>=30?'slow':'';
+    return `<div class="giro-row">
+      <div class="giro-name">${g.nome.replace('Caixa ','')}</div>
+      <div class="giro-track"><div class="giro-fill ${cls}" style="width:${pct}%"></div></div>
+      <div class="giro-val">${g.diasGiro>=99?'∞':g.diasGiro+'d'}</div>
+      <div class="giro-days">${g.vel} cx/d</div>
+    </div>`;
+  }).join('');
+
+  // --- Receita projetada ---
+  const mesesR = ['Nov','Dez','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago'];
+  const recReal = [1820,3100,2540,2870,3420,3180,3840,null,null,null];
+  const trendR = (3840-1820)/4;
+  const recProj = mesesR.map((_,i)=>recReal[i]!==null?null:Math.round(3840+trendR*(i-6)));
+  const allR = mesesR.map((_,i)=>recReal[i]||recProj[i]);
+  const maxR = Math.max(...allR);
+  
+  const rpEl = document.getElementById('receita-proj');
+  rpEl.innerHTML = mesesR.map((m,i)=>{
+    const v = allR[i];
+    const h = Math.max(4,Math.round((v/maxR)*56));
+    const isProj = recReal[i]===null;
+    return `<div class="rp-col">
+      <div class="rp-mes">${m}</div>
+      <div class="rp-bar-wrap"><div class="rp-bar ${isProj?'proj':'real'}" style="height:${h}px"></div></div>
+      <div class="rp-val" style="color:${isProj?'var(--wood-mid)':'var(--text)'}">R$ ${(v/1000).toFixed(1)}k</div>
+    </div>`;
+  }).join('');
+
+  const totalReal = recReal.filter(x=>x!==null).reduce((a,b)=>a+b,0);
+  const totalProj = recProj.filter(x=>x!==null).reduce((a,b)=>a+b,0);
+  const growth = Math.round(((totalProj-totalReal/recReal.filter(x=>x!==null).length*3)/(totalReal/recReal.filter(x=>x!==null).length*3))*100);
+  document.getElementById('rp-real').textContent = 'R$ '+totalReal.toLocaleString('pt-BR');
+  document.getElementById('rp-proj').textContent = 'R$ '+totalProj.toLocaleString('pt-BR');
+  document.getElementById('rp-growth').textContent = (growth>0?'+':'')+growth+'%';
+
+  // --- Insights automáticos ---
+  const insights = [];
+  if(cxDia > CAP_DIA) insights.push({icon:'ti-alert-triangle',cls:'red',title:'Capacidade excedida',desc:`Você precisará produzir ${cxDia} cx/dia mas a capacidade é ${CAP_DIA}. Considere priorizar pedidos ou ampliar turnos.`});
+  const criticos = rupturas.filter(r=>r.diasAteRuptura<=5);
+  if(criticos.length>0) insights.push({icon:'ti-package-off',cls:'red',title:`${criticos.length} produto${criticos.length>1?'s':''} perto de ruptura`,desc:`${criticos.map(r=>r.nome.replace('Caixa ','')).join(', ')} ${criticos.length>1?'acabarão':'acabará'} em ≤5 dias ao ritmo atual.`});
+  const projecaoAlta = valsProj[valsProj.length-1] > valsHist[valsHist.length-1]*1.1;
+  if(projecaoAlta) insights.push({icon:'ti-trending-up',cls:'green',title:'Demanda em alta',desc:`Projeção indica +${Math.round(((valsProj[2]-valsHist[6])/valsHist[6])*100)}% de pedidos nos próximos 3 meses. Bom momento para aumentar estoque preventivo.`});
+  const giroLento = giroData.filter(g=>g.diasGiro>30);
+  if(giroLento.length>0) insights.push({icon:'ti-clock',cls:'amber',title:`${giroLento.length} produto${giroLento.length>1?'s com':'com'} giro lento`,desc:`${giroLento[0].nome.replace('Caixa ','')} tem estoque para ${giroLento[0].diasGiro} dias. Considere promoção ou redução de reposição.`});
+  if(insights.length===0) insights.push({icon:'ti-circle-check',cls:'green',title:'Operação saudável',desc:'Todos os indicadores estão dentro do esperado. Continue monitorando semanalmente.'});
+  // cap at 3
+  const ins3 = insights.slice(0,3);
+  document.getElementById('prev-insights').innerHTML = ins3.map(x=>`
+    <div class="insight-card">
+      <div class="insight-icon ${x.cls}"><i class="ti ${x.icon}"></i></div>
+      <div class="insight-text"><p>${x.title}</p><span>${x.desc}</span></div>
+    </div>`).join('');
+}
 
 buildBarChart();buildDonut();updateDashMetrics();renderProdutos();renderClientes();renderEstoque();renderPedidos();
 </script>
